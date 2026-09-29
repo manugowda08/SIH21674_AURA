@@ -1,0 +1,39 @@
+name: "BAS Microbial Sample Handling (MGS-01)"
+description: >
+  Eight-step microgravity sample inoculation and incubation protocol.
+  Swap this file to retarget the system at a different experiment - no
+  retraining of the validation logic required.
+
+steps:
+  - id: 1
+    name: don_gloves
+    zone: centre
+    prompt: "Don gloves"
+  - id: 2
+    name: sanitise_surface
+    zone: centre
+    prompt: "Sanitise the work surface"
+  - id: 3
+    name: retrieve_cartridge
+    zone: left
+    prompt: "Retrieve the sample cartridge from left stowage"
+  - id: 4
+    name: draw_medium
+    zone: centre
+    prompt: "Draw growth medium with the syringe"
+  - id: 5
+    name: inoculate_vial
+    zone: centre
+    prompt: "Inoculate the culture vial"
+  - id: 6
+    name: seal_and_label
+    zone: centre
+    prompt: "Seal and label the vial"
+  - id: 7
+    name: stow_in_incubator
+    zone: right
+    prompt: "Stow the vial in the incubator module"
+  - id: 8
+    name: confirm_on_interface
+    zone: right
+    prompt: "Confirm the entry on the interface"

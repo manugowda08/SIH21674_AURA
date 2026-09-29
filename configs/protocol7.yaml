@@ -1,0 +1,36 @@
+name: "BAS Microbial Sample Handling (MGS-01, 7-step)"
+description: >
+  Seven-step variant. Draw-medium and inoculate are combined into a single
+  sample-preparation step because, without object detection, both present as
+  a syringe held in the centre zone and cannot be separated by pose alone.
+  Reverts to eight steps once a prop detector is trained.
+
+steps:
+  - id: 1
+    name: don_gloves
+    zone: centre
+    prompt: "Don gloves"
+  - id: 2
+    name: sanitise_surface
+    zone: centre
+    prompt: "Sanitise the work surface"
+  - id: 3
+    name: retrieve_cartridge
+    zone: left
+    prompt: "Retrieve the sample cartridge from left stowage"
+  - id: 4
+    name: draw_and_inoculate
+    zone: centre
+    prompt: "Draw growth medium and inoculate the vial"
+  - id: 5
+    name: seal_and_label
+    zone: centre
+    prompt: "Seal and label the vial"
+  - id: 6
+    name: stow_in_incubator
+    zone: right
+    prompt: "Stow the vial in the incubator module"
+  - id: 7
+    name: confirm_on_interface
+    zone: right
+    prompt: "Confirm the entry on the interface"

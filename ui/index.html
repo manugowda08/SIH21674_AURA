@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>On-board HAR Assistant</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="top">
+  <span class="dot" id="dot"></span>
+  <div>
+    <div class="title">On-board HAR assistant</div>
+    <div class="sub" id="proto">connecting</div>
+  </div>
+  <div class="pill">
+    <span class="tag on">offline</span>
+    <span class="tag" id="rec">recording</span>
+    <span class="tag" id="fps">-- fps</span>
+  </div>
+</header>
+
+<div id="alertbanner"><span class="bang">!</span><span id="alerttext"></span></div>
+
+<main class="wrap">
+  <section>
+    <div class="card">
+      <img class="vid" id="vid" src="/stream" alt="Live payload camera feed">
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Event log</div>
+      <div class="log" id="log"></div>
+    </div>
+  </section>
+
+  <aside>
+    <div class="card pad">
+      <div class="lbl">Current activity</div>
+      <div class="big idle" id="cur">idle</div>
+      <div class="meter"><i id="bar"></i></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Confidence by class</div>
+      <div id="probs"></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Next step</div>
+      <div class="next" id="next">--</div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Voice</div>
+      <div class="voicerow">
+        <button class="vbtn" id="vfemale" type="button" disabled>Female</button>
+        <button class="vbtn" id="vmale" type="button" disabled>Male</button>
+      </div>
+      <select id="voicesel" class="vsel" disabled>
+        <option>loading voices...</option>
+      </select>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Protocol</div>
+      <div id="steps"></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="lbl">Alerts</div>
+      <div id="alerts"><div class="quiet">none</div></div>
+    </div>
+  </aside>
+</main>
+
+<footer class="foot">
+  <span id="sess">session --</span>
+  <span id="events">0 events</span>
+  <span>no network required</span>
+  <span id="reportnote"></span>
+  <a id="reportlink" href="/report" target="_blank" class="reportbtn">Generate mission report (PDF)</a>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

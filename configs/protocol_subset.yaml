@@ -1,0 +1,23 @@
+name: BAS Microbial Sample Handling (MGS-01) (5-step verified subset)
+description: 'Auto-generated: only steps the sensing resolves.'
+steps:
+- id: 1
+  name: don_gloves
+  zone: centre
+  prompt: Don gloves
+- id: 2
+  name: sanitise_surface
+  zone: centre
+  prompt: Sanitise the work surface
+- id: 3
+  name: retrieve_cartridge
+  zone: left
+  prompt: Retrieve the sample cartridge from left stowage
+- id: 4
+  name: stow_in_incubator
+  zone: right
+  prompt: Stow the vial in the incubator module
+- id: 5
+  name: confirm_on_interface
+  zone: right
+  prompt: Confirm the entry on the interface
